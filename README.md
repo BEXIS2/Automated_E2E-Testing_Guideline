@@ -59,3 +59,5 @@ Playwright is the testing tool that will help us recording and running our tests
     <img src="screenshots/testing.jpg" height="400">
 
 ## Recording
+Now that you have setup your environment and installed necessary tools, we may start recording tests and implement verification.
+You may find tutorial and information on recording and testing in the [RECORDING.md](RECORDING.md) file.

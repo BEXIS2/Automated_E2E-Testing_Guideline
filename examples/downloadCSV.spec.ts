@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('test', async ({ page }) => {
+test('Download first dataset as CSV', async ({ page }) => {
   await page.goto('https://demo.bexis2.uni-jena.de/');
   await page.getByRole('button', { name: 'Public Search' }).click();
   const page1Promise = page.waitForEvent('popup');

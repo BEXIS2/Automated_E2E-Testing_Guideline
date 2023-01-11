@@ -2,7 +2,7 @@
 You may need to login to run some tests and access data. To do so, please follow below instructions.
 
 ## Setting up your environment
-In the file explorer, please find the file named `.env` and replace the placeholders with your credentials and save the file.
+In the file explorer, please find the file named `.env` and replace the placeholders with the URL of your choice and your credentials and save the file.
 ```bash
 export BASE_URL="url"
 export LOGIN_USERNAME="username"
@@ -27,11 +27,11 @@ import login from "../auth/login";
 
 test.beforeEach(async ({ page }) => {
     await login(page, user);
-    await page.goto(process.env.BASE_URL);
 });
 ```
-You may also get rid of `// Recording...` in the test file now.
-After insertion, you will end up with a file with the below code:
+You may also get rid of `// Recording...` in the test block now.
+
+After the insertion, you will end up with a file with the below code:
 ```TypeScript
 import { test, expect } from '@playwright/test';
 import { user } from "../auth/users";
@@ -46,4 +46,4 @@ test('test', async ({ page }) => {
 });
 ```
 
-To continue recording, you need to put your cursor in the test block and click on "Record at cursor" in Testing menu.
+To continue recording, in the Testing menu, first select "Show browsers" then run the test. Without closing the browser, at the end of the test you need to put your cursor in the test block and click on "Record at cursor" in Testing menu. Then you may continue to record your test.

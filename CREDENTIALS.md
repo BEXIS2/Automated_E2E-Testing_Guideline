@@ -10,7 +10,7 @@ export LOGIN_EMAIL="email"
 export LOGIN_PASSWORD="password"
 ```
 ## Login
-To log in with the provided credentials, you will need to insert some code in your test. The inserted code will open the URL saved in `BASE_URL` and navigate to login page and log in with the provided credentials in `USERNAME` and `PASSWORD`. It will be run before each test block.
+To log in with the provided credentials, you will need to insert some code in your test. The inserted code will open the URL saved in `BASE_URL` and navigate to login page and log in with the provided credentials in `LOGIN_USERNAME` and `LOGIN_PASSWORD`. It will be run before each test block.
 
 After you are done with your recording, you may go ahead and insert below code just after the first line:
 ```TypeScript

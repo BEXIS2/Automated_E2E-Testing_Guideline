@@ -10,17 +10,9 @@ export LOGIN_EMAIL="email"
 export LOGIN_PASSWORD="password"
 ```
 ## Login
-To log in with the provided credentials, you will need to insert some code in your test. The inserted code will open the URL saved in `BASE_URL` and navigate to login page and log in with the provided credentials in `USERNAME` and `PASSWORD`.
+To log in with the provided credentials, you will need to insert some code in your test. The inserted code will open the URL saved in `BASE_URL` and navigate to login page and log in with the provided credentials in `USERNAME` and `PASSWORD`. It will be run before each test block.
 
-To begin with, start a new recording and then close the browser. It should create a file with below code:
-```TypeScript
-import { test, expect } from '@playwright/test';
-
-test('test', async ({ page }) => {
-// Recording...
-});
-```
-Now, you may go ahead and insert below code just after the first line:
+After you are done with your recording, you may go ahead and insert below code just after the first line:
 ```TypeScript
 import { user } from "../auth/users";
 import login from "../auth/login";
@@ -29,9 +21,8 @@ test.beforeEach(async ({ page }) => {
     await login(page, user);
 });
 ```
-You may also get rid of `// Recording...` in the test block now.
 
-After the insertion, you will end up with a file with the below code:
+After the insertion, you will end up with a file similar to the below example:
 ```TypeScript
 import { test, expect } from '@playwright/test';
 import { user } from "../auth/users";
@@ -41,9 +32,6 @@ test.beforeEach(async ({ page }) => {
     await login(page, user);
 });
 
-test('test', async ({ page }) => {
-
-});
+...
+...
 ```
-
-To continue recording, in the Testing menu, first select "Show browsers" then run the test. Without closing the browser, at the end of the test you need to put your cursor in the test block and click on "Record at cursor" in Testing menu. Then you may continue to record your test.

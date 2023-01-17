@@ -64,3 +64,6 @@ You may find tutorial and information on recording and testing in the [RECORDING
 
 ## Configuration
 To begin testing with BEXIS2, you will need to make some configurations. Please refer to [CREDENTIALS.md](CREDENTIALS.md).
+
+## Assertions
+To begin writing validation code and proper tests, check out [ASSERTIONS.md](ASSERTIONS.md) file.

@@ -67,3 +67,6 @@ To begin testing with BEXIS2, you will need to make some configurations. Please 
 
 ## Assertions
 To begin writing validation code and proper tests, check out [ASSERTIONS.md](ASSERTIONS.md) file.
+
+## Errors
+If you are getting errors, you might like to check [ERRORS.md](ERRORS.md) file.
